@@ -38,7 +38,7 @@ class NorthwindApi {
     /** Devuelve un List<OrderDto> para un customer dado */
     suspend fun getOrders(customerId: String): List<OrderDto> {
         return client
-            .get("$baseUrl/customers/$customerId/orders")
+            .get("$baseUrl/customer/$customerId/orders")
             .body<List<OrderDto>>()
     }
 }
