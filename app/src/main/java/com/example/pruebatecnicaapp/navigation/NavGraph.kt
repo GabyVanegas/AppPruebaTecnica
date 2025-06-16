@@ -1,6 +1,7 @@
 package com.example.pruebatecnicaapp.navigation
 
 import androidx.compose.runtime.Composable
+import com.example.pruebatecnicaapp.ui.orders.*
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -31,7 +32,7 @@ fun NavGraph(vm: MainViewModel) {
             })
         ) { backStackEntry ->
             val customerId = backStackEntry.arguments?.getString("customerId")!!
-            OrdersScreen(vm, customerId)
+            com.example.pruebatecnicaapp.ui.orders.OrdersScreen(vm, customerId)
         }
     }
 }
