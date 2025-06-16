@@ -38,10 +38,9 @@ class NorthwindRepository(private val api: NorthwindApi) {
         return api.orderExists(orderId)
     }
 
-    // Si decides implementar un endpoint general GET /orders, puedes usar esto:
+
     private suspend fun fetchAllOrders(): List<OrderDto> {
-        // Lógica a implementar si tienes un endpoint para obtener todas las órdenes
-        // De momento lanza excepción para que no se use directamente sin definir
+
         throw NotImplementedError("No hay endpoint GET /orders aún definido")
     }
 

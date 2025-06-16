@@ -38,13 +38,13 @@ class NorthwindApi {
             append("$baseUrl/customers")
             country?.let { append("?country=${it}") }
         }
-        // fuerza la inferencia del tipo reificado si hiciera falta:
+
         return client
             .get(url)
             .body<List<CustomerDto>>()
     }
 
-    // NUEVOS métodos para Customers
+
     suspend fun addCustomer(customer: CustomerDto): HttpResponse {
         return client.post("$baseUrl/customers") {
             contentType(ContentType.Application.Json)
